@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'ZapfHumanist';
+  src: url('../assets/fonts/zapf.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'ZapfHumanist', 'Optima', sans-serif !important;
+}
+
+.q-btn, .q-field, .q-item, .q-toolbar__title {
+  font-family: 'ZapfHumanist', sans-serif;
+}
