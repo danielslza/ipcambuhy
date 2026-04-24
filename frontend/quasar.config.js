@@ -37,7 +37,9 @@ export default defineConfig((/* ctx */) => {
         node: 'node22',
       },
 
+      // vueRouterMode: 'history' remove o # da URL.
       vueRouterMode: 'history', // available values: 'hash', 'history'
+
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -73,7 +75,11 @@ export default defineConfig((/* ctx */) => {
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#devserver
     devServer: {
       // https: true,
-      open: true, // opens browser window automatically
+      open: {
+        app: {
+          name: 'brave',
+        },
+      }, // opens browser window automatically
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
@@ -86,9 +92,12 @@ export default defineConfig((/* ctx */) => {
       // For special cases outside of where the auto-import strategy can have an impact
       // (like functional components as one of the examples),
       // you can manually specify Quasar components/directives to be available everywhere:
-      //
+      // components: [],
       // directives: [],
-      importStrategy: 'auto', // Isso aqui faz o Quasar "descobrir" o QSpacer sozinho
+
+      importStrategy: 'auto',
+
+      // Define os plugins que serão utilizados.
       plugins: [
         'Notify',
         'Dialog',

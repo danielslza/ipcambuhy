@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     
-    <!-- HEADER (idêntico ao PublicLayout) -->
+    <!-- Header -->
     <q-header elevated class="bg-primary text-white">
       <q-toolbar class="custom-toolbar">
         
@@ -21,7 +21,6 @@
           </div>
         </div>
 
-        <!-- Espaçamento correto -->
         <q-space />
 
         <!-- Botão Home -->
@@ -37,7 +36,7 @@
           <q-tooltip>Página Inicial</q-tooltip>
         </q-btn>
 
-        <!-- Chip Logado / Sair? -->
+        <!-- Logado / Sair? -->
         <q-chip 
           clickable
           :color="hoverLogado ? 'negative' : 'white'" 
@@ -54,12 +53,12 @@
       </q-toolbar>
     </q-header>
 
-    <!-- CONTEÚDO -->
+    <!-- Conteúdo -->
     <q-page-container>
       <router-view />
     </q-page-container>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <q-footer class="bg-secondary text-white text-center q-pa-sm">
       <span class="text-caption">
         © 2026 IPB - Sistema de Gestão Interna

@@ -1,7 +1,7 @@
 <template>
   <q-page class="bg-grey-2">
 
-    <!-- HERO -->
+    <!-- Texto Principal -->
     <div class="text-center q-pa-xl">
       <h2 class="text-primary text-weight-bold q-my-none">Igreja Presbiteriana do Cambuhy</h2>
       <p class="text-h6 text-secondary q-mt-sm q-mb-none">
@@ -9,10 +9,10 @@
       </p>
     </div>
 
-    <!-- CONTEÚDO: Horários (esquerda) + Mapa (direita) -->
+    <!-- Corpo Geral -->
     <div class="row q-px-lg q-pb-xl q-col-gutter-lg" style="max-width: 1100px; margin: 0 auto;">
 
-      <!-- COLUNA ESQUERDA — Informações -->
+      <!-- Esquerda -->
       <div class="col-12 col-md-5">
         <q-card class="my-card shadow-4" style="border-radius: 12px;">
           <q-card-section class="bg-primary text-white row items-center">
@@ -44,9 +44,7 @@
         </q-card>
       </div>
 
-      
-
-      <!-- COLUNA DIREITA — Mapa -->
+      <!-- Direita -->
       <div class="col-12 col-md-7">
         <q-card class="shadow-4" style="border-radius: 12px; overflow: hidden;">
           <q-card-section class="bg-primary text-white row items-center q-py-sm">
@@ -85,7 +83,6 @@ let map = null
 const lat = -22.209001903816706
 const lng = -47.383056248789764
 
-// SVG do pin personalizado nas cores do site
 const pinSvg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="36" height="52">
   <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0z" fill="#0F3C2C"/>

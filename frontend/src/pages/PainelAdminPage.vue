@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-md bg-grey-2">
 
-    <!-- HEADER -->
+    <!-- Header -->
     <div class="row items-center justify-between q-mb-lg">
       <div>
         <h5 class="q-my-none text-primary text-weight-bold">Gestão de Membros</h5>
@@ -17,7 +17,7 @@
       />
     </div>
 
-    <!-- LISTA -->
+    <!-- Lista -->
     <q-list bordered separator class="bg-white rounded-borders shadow-2">
 
       <q-item v-if="membros.length === 0" class="q-pa-xl text-center">
@@ -69,7 +69,7 @@
       </q-item>
     </q-list>
 
-    <!-- MODAL -->
+    <!-- Modal -->
     <q-dialog v-model="modalAberto" persistent>
       <q-card style="min-width: 400px" class="q-pa-sm">
 
@@ -154,9 +154,8 @@ import { useQuasar } from 'quasar'
 
 const $q = useQuasar()
 
-/* ======================
-   STATE
-====================== */
+// State
+
 const membros = ref([])
 const modalAberto = ref(false)
 const editando = ref(false)
@@ -173,17 +172,14 @@ const formInicial = {
 const form = ref({ ...formInicial })
 
 
-/* ======================
-   HELPERS
-====================== */
+// Helpers
+
 const resetForm = () => {
   form.value = { ...formInicial }
 }
 
+// API
 
-/* ======================
-   API
-====================== */
 const carregarMembros = async () => {
   try {
     const { data } = await api.get('/membros')
@@ -237,10 +233,8 @@ const excluirMembro = (id) => {
   })
 }
 
+// UI
 
-/* ======================
-   UI ACTIONS
-====================== */
 const abrirFormulario = (membro = null) => {
   if (membro) {
     form.value = { ...membro }
@@ -252,8 +246,6 @@ const abrirFormulario = (membro = null) => {
 
   modalAberto.value = true
 }
-
-
 
 onMounted(carregarMembros)
 </script>

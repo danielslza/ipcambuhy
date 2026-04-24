@@ -1,9 +1,7 @@
 <template>
-  <!-- Fundo com gradiente suave usando as cores da IPB -->
   <q-page class="bg-primary flex flex-center">
     <div class="column items-center">
       
-      <!-- Logotipo acima do card para dar respiro -->
       <img 
         src="~assets/logo-ipb-branco.png" 
         style="width: 120px; margin-bottom: 20px;"
@@ -68,7 +66,6 @@
         </q-card-section>
       </q-card>
       
-      <!-- Link de ajuda discreto -->
       <q-btn flat no-caps label="Esqueci minha senha" color="white" class="q-mt-md" size="sm" />
     </div>
   </q-page>
@@ -84,17 +81,20 @@ const $q = useQuasar()
 const router = useRouter()
 
 const carregando = ref(false)
+
+// Dados do formulário.
 const login = ref({
   username: '',
   password: ''
 })
 
 const efetuarLogin = async () => {
-  // Impede cliques duplos
   if (carregando.value) return
   
   carregando.value = true
   try {
+
+    // Chama o backend.
     const response = await api.post('/login', login.value)
     
     $q.notify({ 
@@ -104,7 +104,7 @@ const efetuarLogin = async () => {
     })
     
     localStorage.setItem('token_ipb', response.data.token)
-    router.push({ name: 'painel-admin' }) // Redireciona para a área restrita
+    router.push({ name: 'painel-admin' })
     
   } catch (error) {
     console.error('Erro no login:', error)
@@ -120,7 +120,6 @@ const efetuarLogin = async () => {
 </script>
 
 <style scoped>
-/* Aplica a Zapf Humanist que configuramos globalmente */
 .login-card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);

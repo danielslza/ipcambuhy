@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     
-    <!-- HEADER -->
+    <!-- Header -->
     <q-header elevated class="bg-primary text-white">
       <q-toolbar class="custom-toolbar">
         
@@ -37,12 +37,12 @@
       </q-toolbar>
     </q-header>
 
-    <!-- CONTEÚDO -->
+    <!-- Conteúdo -->
     <q-page-container>
       <router-view />
     </q-page-container>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <q-footer class="bg-secondary text-white text-center q-pa-sm">
       <span class="text-caption">
         © 2026 IPB - Sistema de Gestão Interna
