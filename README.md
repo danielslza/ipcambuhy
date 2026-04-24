@@ -182,8 +182,7 @@ http://localhost:9000
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Daniel**
-Projeto com fins de aprendizado.
+Desenvolvido por **Daniel**. Projeto com fins de aprendizado.
 
 ---
 
